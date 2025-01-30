@@ -1,9 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoDeProdutos.Services.Api", "GestaoDeProdutos.Services.Api\GestaoDeProdutos.Services.Api.csproj", "{056FDEBD-8D3D-448A-A379-6B354898A798}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API REST", "API REST", "{BA952941-92A8-4AD0-B9D6-1F893F4AAECD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DDD - Domain Driven Design", "DDD - Domain Driven Design", "{2CAA2196-3B2D-4419-97F7-C64760FB0C2B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{2333BD48-8F2A-4614-9258-DCFEF6BA8BB5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{2F219D46-3C79-460B-873E-CDEDBA8FC352}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +26,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{056FDEBD-8D3D-448A-A379-6B354898A798} = {BA952941-92A8-4AD0-B9D6-1F893F4AAECD}
+		{2333BD48-8F2A-4614-9258-DCFEF6BA8BB5} = {2CAA2196-3B2D-4419-97F7-C64760FB0C2B}
+		{2F219D46-3C79-460B-873E-CDEDBA8FC352} = {2CAA2196-3B2D-4419-97F7-C64760FB0C2B}
 	EndGlobalSection
 EndGlobal
