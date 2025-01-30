@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Erenes\\Documents\\github\\aulas-coti\\exercícios-aula2\\GestaoDeProdutos\\GestaoDeProdutos.Services.Api\\GestaoDeProdutos.Services.Api.csproj": {}
+    "C:\\Users\\Erenes\\Documents\\github\\aulas-coti\\exercicios-aula2\\GestaoDeProdutos\\GestaoDeProdutos.Services.Api\\GestaoDeProdutos.Services.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Erenes\\Documents\\github\\aulas-coti\\exercícios-aula2\\GestaoDeProdutos\\GestaoDeProdutos.Services.Api\\GestaoDeProdutos.Services.Api.csproj": {
+    "C:\\Users\\Erenes\\Documents\\github\\aulas-coti\\exercicios-aula2\\GestaoDeProdutos\\GestaoDeProdutos.Services.Api\\GestaoDeProdutos.Services.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Erenes\\Documents\\github\\aulas-coti\\exercícios-aula2\\GestaoDeProdutos\\GestaoDeProdutos.Services.Api\\GestaoDeProdutos.Services.Api.csproj",
+        "projectUniqueName": "C:\\Users\\Erenes\\Documents\\github\\aulas-coti\\exercicios-aula2\\GestaoDeProdutos\\GestaoDeProdutos.Services.Api\\GestaoDeProdutos.Services.Api.csproj",
         "projectName": "GestaoDeProdutos.Services.Api",
-        "projectPath": "C:\\Users\\Erenes\\Documents\\github\\aulas-coti\\exercícios-aula2\\GestaoDeProdutos\\GestaoDeProdutos.Services.Api\\GestaoDeProdutos.Services.Api.csproj",
+        "projectPath": "C:\\Users\\Erenes\\Documents\\github\\aulas-coti\\exercicios-aula2\\GestaoDeProdutos\\GestaoDeProdutos.Services.Api\\GestaoDeProdutos.Services.Api.csproj",
         "packagesPath": "C:\\Users\\Erenes\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Erenes\\Documents\\github\\aulas-coti\\exercícios-aula2\\GestaoDeProdutos\\GestaoDeProdutos.Services.Api\\obj\\",
+        "outputPath": "C:\\Users\\Erenes\\Documents\\github\\aulas-coti\\exercicios-aula2\\GestaoDeProdutos\\GestaoDeProdutos.Services.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
