@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "hUVdwuqPTOnwBUyaILO/G+CQRLL6sy+PiQwb3OuLmms=",
+  "Source": "GestaoDeProdutos.Services.Api",
+  "BasePath": "_content/GestaoDeProdutos.Services.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
