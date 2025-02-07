@@ -1,0 +1,89 @@
+name: 🚀 Deploy .NET API
+
+on:
+  push:
+    branches:
+      - main # Alterar para o branch correto
+
+jobs:
+  # Job 1: Compilação
+  compilacao:
+    name: 🔧 Compilar Aplicação
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout do código
+        uses: actions/checkout@v4
+
+      - name: 🔧 Configurar .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0.x
+
+      - name: 📦 Restaurar dependências
+        run: dotnet restore > relatorio-compilacao.txt
+
+      - name: 🏗️ Compilar o projeto
+        run: dotnet build --configuration Release --no-restore >> relatorio-compilacao.txt
+
+      - name: ⬆️ Upload do build
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: ./
+
+      - name: 📄 Salvar Relatório de Compilação
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorio-compilacao
+          path: relatorio-compilacao.txt
+
+  # Job 2: Testes
+  testes:
+    name: ✅ Executar Testes
+    runs-on: ubuntu-latest
+    needs: compilacao # Só roda depois da compilação
+
+    steps:
+      - name: 📥 Baixar artefatos do build
+        uses: actions/download-artifact@v4
+        with:
+          name: build-output
+          path: ./
+
+      - name: 🧪 Rodar testes
+        run: dotnet test --configuration Release --no-build --verbosity normal > relatorio-testes.txt
+
+      - name: 📄 Salvar Relatório de Testes
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorio-testes
+          path: relatorio-testes.txt
+
+  # Job 3: Deploy
+  deploy:
+    name: 🚀 Publicar Aplicação
+    runs-on: ubuntu-latest
+    needs: [compilacao, testes] # Só executa se build e testes passarem
+
+    steps:
+      - name: 📥 Baixar artefatos do build
+        uses: actions/download-artifact@v4
+        with:
+          name: build-output
+          path: ./
+
+      - name: 📦 Publicar o artefato
+        run: dotnet publish -c Release -o ./publish > relatorio-deploy.txt
+
+      - name: ⬆️ Upload do artefato final
+        uses: actions/upload-artifact@v4
+        with:
+          name: app
+          path: ./publish
+
+      - name: 📄 Salvar Relatório de Deploy
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorio-deploy
+          path: relatorio-deploy.txt
