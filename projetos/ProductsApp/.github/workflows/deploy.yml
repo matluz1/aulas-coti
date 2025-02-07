@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build-output
-          path: ./
+          path: ./projetos/ProductsApp/
 
       - name: 📄 Salvar Relatório de Compilação
         uses: actions/upload-artifact@v4
@@ -49,7 +49,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-output
-          path: ./
+          path: ./projetos/ProductsApp/
 
       - name: 🧪 Rodar testes
         run: dotnet test --configuration Release --no-build --verbosity normal > relatorio-testes.txt
@@ -71,16 +71,16 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-output
-          path: ./
+          path: ./projetos/ProductsApp/
 
       - name: 📦 Publicar o artefato
-        run: dotnet publish -c Release -o ./publish > relatorio-deploy.txt
+        run: dotnet publish -c Release -o ./projetos/ProductsApp/publish > relatorio-deploy.txt
 
       - name: ⬆️ Upload do artefato final
         uses: actions/upload-artifact@v4
         with:
           name: app
-          path: ./publish
+          path: ./projetos/ProductsApp/publish
 
       - name: 📄 Salvar Relatório de Deploy
         uses: actions/upload-artifact@v4
