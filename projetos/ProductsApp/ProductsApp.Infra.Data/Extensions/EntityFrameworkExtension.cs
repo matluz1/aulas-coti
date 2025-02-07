@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ProductsApp.Domain.Interfaces.Repositories;
 using ProductsApp.Infra.Data.Contexts;
+using ProductsApp.Infra.Data.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +24,9 @@ namespace ProductsApp.Infra.Data.Extensions
 
             //configurando a injeção de dependência para a classe DataContext
             services.AddDbContext<DataContext>(options => options.UseSqlServer(connectionString));
+
+            //configurando a injeção de dependência para o UnitOfWork
+            services.AddScoped<IUnitOfWork, UnitOfWOrk>();
 
             return services;
         }
