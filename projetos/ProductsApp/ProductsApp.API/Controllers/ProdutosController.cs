@@ -5,7 +5,7 @@ namespace ProductsApp.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductsController : ControllerBase
+    public class ProdutosController : ControllerBase
     {
         [HttpPost]
         public IActionResult Post()

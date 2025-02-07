@@ -5,7 +5,7 @@ namespace ProductsApp.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CategoriesController : ControllerBase
+    public class CategoriasController : ControllerBase
     {
         [HttpGet]
         public IActionResult GetAll()
